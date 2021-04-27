@@ -1,4 +1,5 @@
 import random
+
 STARTING_SCORE = 301
 
 # Functions
@@ -53,6 +54,7 @@ throw_number = 0
 game_is_on = True
 score = STARTING_SCORE
 while game_is_on:
+    print()
     print(f"Pontok: {score}")
     print()
     print(f"Ennyi dobásból lehetne befejezni: {throws_to_end(score=score)}")
@@ -63,9 +65,14 @@ while game_is_on:
     else:
         current_throw = throw(target=target)
         print(f"Ez volt a célpont: {target}, ide érkezett: {current_throw}")
-        score -= dart_board[current_throw]
+        if dart_board[current_throw] > score:
+            print("Ez a dobás nem ért pontot")
+        else:
+            score -= dart_board[current_throw]
 
 
         throw_number +=1
+    if score == 0:
+        game_is_on = False
 
 print(f"Ennyi dobásból sikerült a játék: {throw_number}")

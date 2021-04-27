@@ -5,9 +5,9 @@ import re
 
 file_path = sys.argv[1]
 email_regex ="^[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ\.\&\#\!\+\-\$]+@+[a-zA-Z]+\.[a-z]"
-name_regex = "[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+ [a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\Z"
-address_regex = "\d{4}\s[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\,[\sa-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ\.]+\d{1,2}\."
-phone_regex = "^(\d){2} +(\d){6,7}\Z"
+name_regex = "^[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\s[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\Z"
+address_regex = "^\d{4}\s[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\,\s[\sa-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ\.\d\/]+\."
+phone_regex = "^(\d){2}\s+(\d){6,7}\Z"
 
 def is_valid(dict:dict):
     bad_index = []
