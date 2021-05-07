@@ -1,0 +1,5 @@
+101
+000
+101
+
+Ennyi helyet szabadíthattunk volna fel, gépi foglalás esetén: 3

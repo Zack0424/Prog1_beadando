@@ -32,9 +32,6 @@ def throw(target:str):
 
 
 
-
-
-
 # Creating Dartboard
 dart_board = {}
 starting_points = 501
