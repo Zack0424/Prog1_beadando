@@ -4,7 +4,7 @@ from pprint import pprint
 import re
 
 file_path = sys.argv[1]
-email_regex ="^[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ\.\&\#\!\+\-\$]+@+[a-zA-Z]+\.[a-z]"
+email_regex ="^^[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ\.\&\#\!\+\-\$]+\@[a-zA-Z]+\.[\w]+"
 name_regex = "^[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\s[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\Z"
 address_regex = "^\d{4}\s[a-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ]+\,\s[\sa-záéúőóüöíA-ZÁÉÚŐÓÜÖÍ\.\d\/]+\."
 phone_regex = "^(\d){2}\s+(\d){6,7}\Z"
